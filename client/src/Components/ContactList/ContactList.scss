@@ -1,0 +1,67 @@
+@import "../../assets/style/variables";
+
+.title {
+  padding: 10px 5px;
+  font-weight: 500;
+  margin: 0;
+  color: $title;
+}
+
+.list {
+  padding: 0;
+}
+
+.contact {
+  display: flex;
+  padding: 1rem;
+  border-bottom: $borderFull;
+  max-height: 80px;
+
+  &-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 2rem;
+  }
+
+  &-box {
+    display: flex;
+    margin-left: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 11rem;
+
+    &__date {
+      padding-bottom: 0.9rem;
+      font-size: 13px;
+    }
+
+    &__message {
+      color: #a9a9a9;
+      font-size: 13px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+.contact:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+
+.image-block {
+  position: relative;
+  width: fit-content;
+}
+
+.image-block::before {
+  @include checkBox(66%,-7%);
+}

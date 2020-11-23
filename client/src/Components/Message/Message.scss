@@ -1,0 +1,54 @@
+@import "../../assets/style/variables";
+
+@mixin message-view {
+    width: fit-content;
+    font-size: 13px;
+    border-radius: 1.5rem;
+    padding: 0.7rem;
+  }
+  
+  .messages-block {
+    overflow-y: auto;
+    height: 100%;
+    padding: 0.7rem;
+  }
+  
+  .message {
+    display: flex;
+    margin: 1.2rem 0;
+  
+    &-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 1.5rem;
+    }
+  
+    &-info {
+      margin-left: 0.5rem;
+  
+      &__text {
+        background-color: $messageBg;
+        color: $white;
+        @include message-view;
+      }
+  
+      &__date {
+        font-size: 11px;
+        padding: 0.3rem 0 0 0.8rem;
+        color: $dateColor;
+      }
+    }
+  }
+  
+  .my-message {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin: 1.2rem 0;
+    overflow-y: auto;
+  
+    &-info__text {
+      @include message-view;
+      background-color: $myMessageBg;
+    }
+  }

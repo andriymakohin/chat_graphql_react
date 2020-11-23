@@ -1,0 +1,88 @@
+@import "../../assets/style/variables";
+
+.chat {
+  background-color: $bg-grey-light;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+}
+
+.left-block {
+  border-right: 1px solid $border;
+  background-color: $white;
+  display: grid;
+  grid-template-rows: 120px auto;
+
+
+  &__top {
+    background-color: $bg-grey-light;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 67px 1fr;
+    border-bottom: $borderFull;
+  }
+
+  &__bottom {
+    overflow-y: auto;
+  }
+}
+
+.user-logout {
+  cursor: pointer;
+}
+
+.user-name {
+  grid-column: 1 / span 2;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.user-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.image-block {
+  position: relative;
+  width: fit-content;
+}
+
+.image-block::before {
+  @include checkBox(46%,-8%)
+}
+
+.filter {
+  border-radius: 1rem;
+  height: 2rem;
+  border: 1px solid #E6E6E6;
+  /* padding: 5px 5px 5px 5px; */
+  width: 100%;
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  grid-column: 1 / span 2;
+
+  &-image {
+    position: absolute;
+    width: 14px;
+    top: 20%;
+    right: 10px;
+  }
+}
+
+@media (max-width: 740px) {
+  .chat {
+    background-color: $bg-grey-light;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .on {
+    display: none;
+  }
+  .off {  
+    display: block;
+  }
+}

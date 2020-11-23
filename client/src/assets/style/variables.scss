@@ -1,0 +1,20 @@
+@mixin checkBox($top, $right) {
+    content: url("../../assets/icons/check-mark.svg");
+    position: absolute;
+    right: $right;
+    top: $top;
+    width: 15px;
+    height: 15px;
+  }
+  
+  $border: #E6E6E6;
+  $bg-grey-light: #F5F5F5;
+  $white: #fff;
+  $borderFull: 1px solid $border;
+  $bg-history: #FAFAFA;
+  $openSansFont: 'Open Sans', sans-serif;
+  $title: #68A0B9;
+  $messageBg: #3C4252;
+  $dateColor: #BEBEBE;
+  $myMessageBg: #DFDFDF;
+  
